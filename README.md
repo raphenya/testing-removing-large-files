@@ -12,11 +12,11 @@ BEFORE FOLLOWING THESE INSTRUCTIONS BACKUP YOUR REPOSITORY
 
 2. https://www.youtube.com/watch?v=_XUxVMQn5xY
 
-### Step 1: make sure the repo is not protected
+### Step 1: Make sure the repo is not protected
 
 Check if the repository is protected and toggle to un-protect.
 
-### Step 2: remove file (large-file.txt) from full repo at '/Users/amos/Documents/repos/testing-removing-large-files'
+### Step 2: Remove file (large-file.txt) from full repo at '/Users/amos/Documents/repos/testing-removing-large-files'
 
 ```
 cd /Users/amos/Documents/repos/testing-removing-large-files
@@ -159,11 +159,11 @@ Checking on a commit that added 'large-file.txt' at https://github.com/raphenya/
 
 ### Step 9: Decision to keep copies
 
-Ok, now the repository at remote has the large file removed and your local has the large file in it's history.
+Okay, now the repository at the remote location has the large file removed, and your local repository has the large file in its history.
 
-So, archive your local repository and delete your local repository.
+So, archive your local repository (or delete it).
 
-Then re-clone from remote with large file removed from history.
+Then re-clone from remote with a large file removed from history.
 
 ### Step 10: Restore repository protection
 
