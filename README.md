@@ -1,10 +1,10 @@
 # testing-removing-large-files
 
-This repo contains commands used to remove a large file from a repository history.
+This repository contains commands used to remove a large files from a repository history.
 
 ### NOTICE
 
-*** BEFORE FOLLOWING THESE INSTRUCTIONS BACKUP YOUR REPOSITORY ***
+BEFORE FOLLOWING THESE INSTRUCTIONS BACKUP YOUR REPOSITORY
 
 ### Resources
 
@@ -16,7 +16,7 @@ This repo contains commands used to remove a large file from a repository histor
 
 Check if the repository is protected and toggle to un-protect.
 
-### Step 2: remove file (large-file.txt) from full repo at `/Users/amos/Documents/repos/testing-removing-large-files` 
+### Step 2: remove file (large-file.txt) from full repo at '/Users/amos/Documents/repos/testing-removing-large-files'
 
 ```
 cd /Users/amos/Documents/repos/testing-removing-large-files
@@ -43,16 +43,18 @@ More downloads at https://rtyley.github.io/bfg-repo-cleaner/ and jars for other 
 I used the following for my Mac OS.
 
 ```
+cd ~/Desktop/cleaning
 wget https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar
 ```
 
 ### Step 5: Remove the File from history
 
 ```
+cd ~/Desktop/cleaning
 java -jar bfg-1.14.0.jar --delete-files large-file.txt testing-removing-large-files.git/
 ```
 
-"""
+```
 amos@Amogelangs-MacBook-Pro cleaning % java -jar bfg-1.14.0.jar --delete-files large-file.txt testing-removing-large-files.git/
 
 Using repo : /Users/amos/Desktop/cleaning/testing-removing-large-files.git
@@ -113,7 +115,7 @@ In total, 5 object ids were changed. Full details are logged here:
 	/Users/amos/Desktop/cleaning/testing-removing-large-files.git.bfg-report/2025-06-06/09-30-50
 
 BFG run is complete! When ready, run: git reflog expire --expire=now --all && git gc --prune=now --aggressive
-"""
+```
 
 
 ### Step 6: Clean Up
@@ -123,7 +125,7 @@ cd testing-removing-large-files.git/
 git reflog expire --expire=now --all && git gc --prune=now --aggressive
 ```
 
-"""
+```
 amos@Amogelangs-MacBook-Pro testing-removing-large-files.git % git reflog expire --expire=now --all && git gc --prune=now --aggressive
 Enumerating objects: 8, done.
 Counting objects: 100% (8/8), done.
@@ -132,7 +134,7 @@ Compressing objects: 100% (5/5), done.
 Writing objects: 100% (8/8), done.
 Building bitmaps: 100% (4/4), done.
 Total 8 (delta 2), reused 3 (delta 0), pack-reused 0
-"""
+```
 
 
 ### Step 7: Push or (force push) the Changes
@@ -141,7 +143,7 @@ Total 8 (delta 2), reused 3 (delta 0), pack-reused 0
 git push
 ```
 
-"""
+```
 amos@Amogelangs-MacBook-Pro testing-removing-large-files.git % git push
 Enumerating objects: 8, done.
 Writing objects: 100% (8/8), 689 bytes | 689.00 KiB/s, done.
@@ -149,7 +151,7 @@ Total 8 (delta 0), reused 0 (delta 0), pack-reused 8
 remote: Resolving deltas: 100% (2/2), done.
 To github.com:raphenya/testing-removing-large-files.git
  + 91ece9e...8383d09 main -> main (forced update)
-"""
+```
 
 ### Step 8: Check file in history
 
